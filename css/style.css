@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 99%;
+    max-width: 1600px;
+    height: 100%;
+    border: 5px solid;
+    font-size: 1.5625rem;
+}
+
+/*GRID GRID GRID */
+body{
+    display: grid;
+    grid-template-areas:
+        "header     header      header      header"
+        "nav        nav         nav         nav"
+        "main       main        main        aside"
+        "footer     footer      footer      footer";   
+}
+
+
+header{
+    background-image: url(../assets/fondoheader.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top;
+    text-align: center;
+    grid-area: header;
+}
+
+h1{
+    background-color: #eee2de8f;
+    font-family: cinzel, serif;
+    font-size: 4rem;
+    margin-top: 250px;
+    border-bottom: 5px #2B2A4C solid;
+    border-top: 5px #2B2A4C solid;
+}
+
+.logo{
+    border-radius:50%;
+    width: 330px;
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+
+nav {
+    background-color: #2b2a4cec;
+    position: sticky;
+    top: 0;
+    grid-area: nav;
+}
+
+.logonav{
+    width: 100px;
+    border-radius: 50%;
+}
+
+nav ul {  /*FLEX FLEX FLEX*/
+    font-family: cinzel, serif;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    gap: .9375rem;
+    border-top: 3px solid black;
+}
+
+a{
+    color: #ea906cb7;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.li {
+    padding: 5px 15px 5px 15px;
+    align-self: center;
+}
+
+.liservicios{
+    background-color: #EEE2DE;
+    border-radius: 50%;
+    border: rgba(0, 0, 0, 0.553) 3px solid;
+    padding: 20px;
+    align-self: center;
+}
+
+section{
+    background-color: #2b2a4c55;
+    font-size: 1.5625rem;
+    margin: 30px;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.parrafo{
+    background-color: #f7f7f700;
+    text-align: center;
+    font-size: 2rem;
+    padding-left: 10px ;
+}
+
+main{
+    background-color: #EEE2DE;
+    font-family: annapurna SIL;
+    text-align: left;
+    grid-area: main;
+}
+h2 {
+    font-family: cinzel, serif;
+    font-size: 3rem;
+    margin-top: 90px;
+    margin-bottom: 40px;
+    text-align: center;
+    border-bottom: 3px #2B2A4C double ;
+}
+
+h3{
+    font-family: cinzel, serif;
+    margin-left: 8rem;
+}
+
+h4{
+    font-family: cinzel, serif;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    border-bottom: 3px double black;
+    border-left: 3px double black;
+}
+
+.imgfacultad {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.contenedorflex{
+    background-color: #ea906c6f;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.abogadosflex {
+    background-color: #ea906c6f;
+    border: 3px solid #2B2A4C;
+    width: 293px;
+    height: auto;
+    overflow: hidden;
+    margin: 20px;
+    padding: 10px;
+}
+
+.abogadosflex img {
+    width: 100%;
+}
+
+aside{
+    background-color: #B31312;
+    grid-area: aside;
+}
+
+aside a img{
+    width: 250px;
+}
+
+footer{
+    background-color: #2B2A4C;
+    color: bisque;
+    padding: 20px;
+    grid-area: footer;
+}
