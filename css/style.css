@@ -148,9 +148,7 @@ h4{
 .abogadosflex {
     background-color: #ea906c6f;
     border: 3px solid #2B2A4C;
-    width: 293px;
-    height: auto;
-    overflow: hidden;
+    width: 250px;
     margin: 20px;
     padding: 10px;
 }
@@ -160,12 +158,31 @@ h4{
 }
 
 aside{
+    display: flex;
+    flex-flow: column;
     background-color: #B31312;
     grid-area: aside;
 }
 
+aside section {
+    background-color: #2b2a4c55;
+    margin: 10px;
+}
+
+aside section h3 {
+    margin: 0;
+    margin-bottom: 30px;
+    text-decoration: underline;
+    font-size: 2rem;
+    text-align: center;
+}
+
+aside section article{
+    margin-bottom: 80px;
+}
+
 aside a img{
-    width: 250px;
+    width: 100%;
 }
 
 footer{
