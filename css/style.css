@@ -4,6 +4,7 @@
 }
 
 body{
+    font-size: 32px;
     width: 99%;
     max-width: 1600px;
     height: 100%;
@@ -33,7 +34,7 @@ header{
 h1{
     background-color: #eee2de8f;
     font-family: cinzel, serif;
-    font-size: 4rem;
+    font-size: 2em;
     margin-top: 250px;
     border-bottom: 5px #2B2A4C solid;
     border-top: 5px #2B2A4C solid;
@@ -50,7 +51,7 @@ nav {
     background-color: #2b2a4cec;
     position: sticky;
     top: 0;
-    font-size: 25px;
+    font-size: 0.8em;
     grid-area: nav;
 }
 
@@ -65,7 +66,6 @@ nav ul {  /*FLEX FLEX FLEX*/
     display: flex;
     flex-direction: row;
     justify-content:space-around;
-    gap: .9375rem;
     border-top: 3px solid black;
 }
 
@@ -90,7 +90,6 @@ a{
 
 section{
     background-color: #2b2a4c55;
-    font-size: 1.25rem;
     margin: 30px;
     padding: 10px;
     border-radius: 25px;
@@ -99,11 +98,11 @@ section{
 .parrafo{
     background-color: #f7f7f700;
     text-align: center;
-    font-size: 25px;
     padding-left: 10px ;
 }
 
 main{
+    font-size: 0.7em;
     background-color: #EEE2DE;
     font-family: annapurna SIL;
     text-align: left;
@@ -111,7 +110,7 @@ main{
 }
 h2 {
     font-family: cinzel, serif;
-    font-size: 2.5rem;
+    font-size: 1.7em;
     margin-top: 90px;
     margin-bottom: 40px;
     text-align: center;
@@ -120,13 +119,13 @@ h2 {
 
 h3{
     font-family: cinzel, serif;
-    margin-left: 8rem;
+    margin-left: 128px;
 }
 
 h4{
     font-family: cinzel, serif;
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
+    font-size: 0.8em;
+    margin-bottom: 16px;
     border-bottom: 3px double black;
     border-left: 3px double black;
 }
@@ -142,14 +141,14 @@ h4{
     justify-content: center;
     flex-wrap: wrap;
     text-align: left;
-    margin: 0px;
+    margin: 0;
 }
 
 .abogadosflex {
     background-color: #ea906c6f;
     border: 3px solid #2B2A4C;
     width: 250px;
-    margin: 20px;
+    margin: 10px;
     padding: 10px;
 }
 
@@ -173,7 +172,7 @@ aside section h3 {
     margin: 0;
     margin-bottom: 30px;
     text-decoration: underline;
-    font-size: 2rem;
+    font-size: 1.2em;
     text-align: center;
 }
 
@@ -186,8 +185,118 @@ aside a img{
 }
 
 footer{
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: 0.6em;
+    justify-content: space-around;
+    flex-direction: row-reverse;
     background-color: #2B2A4C;
     color: bisque;
-    padding: 20px;
     grid-area: footer;
+}
+
+footer section ul li {
+    list-style: none;
+    margin: 10px 0 0 0;
+}
+
+.footer_logo{
+    width: 200px;
+    border-radius: 50%;
+}
+
+.footer_h2{
+    margin: 0 0 10px 0;
+}
+
+@media (max-width: 934px) {
+    body{
+        display: grid;
+        grid-template-areas:
+                    "header"
+                    "nav"
+                    "main"
+                    "aside"
+                    "footer";   
+    }
+
+    .logonav {
+        width: 0;
+    }
+
+    aside {
+        flex-direction: row;
+    }
+
+    .footer_logo{
+        width: 0;
+    }
+}
+
+
+
+
+@media (max-width: 834px){
+    
+    body{
+        font-size: 28px
+    }
+
+    h1{
+        margin-top: 140px;
+    }
+
+    .logo{
+        width: 125px;
+    }
+
+    nav ul{
+        padding: 0;
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width : 642px){
+
+    header{
+        background-size: auto;
+}
+
+    h1 {
+        font-size: 1em;
+        margin-top: 100px;
+    }
+
+    .parrafo {
+        margin: 20px 0 30px 0;
+        padding: 0;
+    }
+
+    section{
+        margin: 5px;
+    }
+
+    section h3{
+        margin-left: 45px;
+    }
+
+    nav {
+        position: static;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li{
+        border-bottom:3px solid black ;
+    }
+
+    aside{
+        flex-flow: column;
+    }
+    
+    footer {
+        padding-bottom: 20px;
+        flex-direction: column;
+    }
 }
