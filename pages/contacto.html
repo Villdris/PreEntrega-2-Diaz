@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Annapurna+SIL:wght@400;700&family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link type="image/x-icon" href="../assets/icono.png" rel="icon"/>
-        <link rel="stylesheet" href="../css/style.css">
-        <title>Unidos Por La Justicia</title>
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Annapurna+SIL:wght@400;700&family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link type="image/x-icon" href="../assets/icono.png" rel="icon" />
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Unidos Por La Justicia</title>
+</head>
+
 <body>
     <nav>
         <ul class="nav_ul">
@@ -25,9 +27,9 @@
     <main>
         <section class="texto_principal">
             <h2>¡Contáctanos!</h2>
-            <p>¿Listo para obtener ayuda legal? No dudes en ponerte en contacto con 
-                nosotros. Estamos aquí para ayudarte en cualquier problema legal que 
-                puedas enfrentar. Utiliza la información a continuación para comunicarte 
+            <p>¿Listo para obtener ayuda legal? No dudes en ponerte en contacto con
+                nosotros. Estamos aquí para ayudarte en cualquier problema legal que
+                puedas enfrentar. Utiliza la información a continuación para comunicarte
                 con nuestro equipo:
             </p>
         </section>
@@ -35,18 +37,18 @@
             <form>
                 <div class="inputs">
                     <label for="nombre"></label>
-                    <input type="text" name="nombre" id="nombre" placeholder="Escribe tu Nombre completo">
+                    <input type="text" name="nombre" id="nombre" placeholder="Escribe tu Nombre completo" required>
                 </div>
                 <div class="inputs">
                     <label for="email"></label>
-                    <input type="email" name="email" id="email" placeholder="Escribe tu Email">
+                    <input type="email" name="email" id="email" placeholder="Escribe tu Email" required>
                 </div>
                 <div class="inputs">
                     <label for="fono"></label>
-                    <input type="tel" name="fono"  id="fono" placeholder="Escribe tu Telefono">
+                    <input type="tel" name="fono" id="fono" placeholder="Escribe tu Telefono" required>
                 </div>
                 <div class="inputs">
-                    <select name="caso" id="caso">
+                    <select name="caso" id="caso" required>
                         <option value="Derechos Humanos">Derechos Humanos</option>
                         <option value="Derecho Civil">Derecho Civil</option>
                         <option value="Derecho De Familia">Derecho De Familia</option>
@@ -64,18 +66,19 @@
                 </div>
                 <div class="inputs">
                     <label for="pais">Chile</label>
-                        <input type="radio" name="pais" id="pais" value="Chile">
+                    <input type="radio" name="pais" id="pais" value="Chile" required>
                     <label for="pais">Argentina</label>
-                        <input type="radio" name="pais" id="pais" value="Argentina">
+                    <input type="radio" name="pais" id="pais" value="Argentina" required>
                 </div>
                 <div class="inputs">
                     <label for="asunto"></label>
-                    <textarea name="asunto" cols="20" rows="10" placeholder="">Específica el motivo de tu consulta</textarea>
+                    <textarea name="asunto" cols="20" rows="10" required> Específica el motivo de tu consulta
+                    </textarea>
                 </div>
                 <input type="submit" value="Consultar">
                 <p>*El valor de la consulta es de 25-USD. <br>
                     Un ejecutivo se contactara contigo para realizar el pago <br>
-                    Luego se entregara la consulta al abogado en cuestion</p>
+                    Luego se entregara la consulta al abogado correspondiente</p>
             </form>
         </section>
     </main>
@@ -133,4 +136,5 @@
         <!-- Grid container -->
     </footer>
 </body>
+
 </html>
