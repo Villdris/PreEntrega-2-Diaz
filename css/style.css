@@ -11,10 +11,10 @@ body{
     border: 5px solid;
     display: grid;
     grid-template-areas:
-        "header"
-        "nav"
-        "main"
-        "footer"
+        "header header header header"
+        "nav nav nav nav"
+        "main main main main"
+        "footer footer footer footer"
 }
 
 .body_pages{
@@ -54,7 +54,7 @@ nav {
     background-color: #2b2a4cec;
     position: sticky;
     top: 0;
-    font-size: 0.8em;
+    font-size: 0.7em;
     box-shadow: 0px 25px 50px 10px #2b2a4c79;
     grid-area: nav;
 }
@@ -66,6 +66,7 @@ nav {
     flex-direction: row;
     justify-content:space-around;
     border-top: 3px solid black;
+    margin-bottom: 0;
 }
 
 .nav_logo{
@@ -74,7 +75,7 @@ nav {
 }
 
 .nav_ul_li {
-    padding: 5px 15px 5px 15px;
+    padding: 5px 13px 5px 13px;
     align-self: center;
 }
 
@@ -88,6 +89,20 @@ a{
     color: #ea906cb7;
     font-weight: 800;
     text-decoration: none;
+}
+
+a:hover{
+    background-color: #ea906cb7 ;
+    color: #EEE2DE;
+    border-left: 16px double #0f0f30;
+    border-right: 16px double #0f0f30;
+}
+
+a:active {
+    background-color: #B31312 ;
+    color: #2B2A4C;
+    border-left: 16px double #0f0f30;
+    border-right: 16px double #0f0f30;
 }
 
 main{
@@ -152,7 +167,7 @@ h4{
     border-left: 3px double black;
 }
 
-.contenedor_flex{
+.contenedor_flex_equipo{
     background-color: #ea906c6f;
     display: flex;
     justify-content: center;
@@ -163,7 +178,7 @@ h4{
     box-shadow: 0px 0px 15px 0px #2b2a4ca8;
 }
 
-.carta_flex {
+.cartas_flex {
     background-color: #ea906c6f;
     border: 3px solid #2B2A4C;
     width: 250px;
@@ -172,8 +187,30 @@ h4{
     box-shadow: 0px 0px 15px 0px #2b2a4ca8;
 }
 
-.carta_flex img {
+.cartas_flex img {
     width: 100%
+}
+
+.contenedor_flex_servicios{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: left;
+    margin: 20px;
+    border-radius: 50px;
+}
+
+.cartas_flex_servicios {
+    flex-grow: 1;
+    background-color: #EEE2DE;
+    border: 3px solid #2B2A4C;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0px 0px 15px 0px #2b2a4ca8;
+}
+
+dt{
+    margin-bottom: 10px;
 }
 
 .contenedor_testimonios{
@@ -194,6 +231,21 @@ h4{
     position:static ;
 }
 
+.formulario{
+    background: #b31212ab;
+    box-shadow: 0 0 15px #b31212ab;
+    border: 1px solid #2B2A4C;
+    border-radius: 25px;
+    max-width: 800px;
+    text-align: center;
+    margin: auto auto 50px auto;
+}
+
+.inputs{
+    text-align: center;
+    width: 100%;
+    padding: 5px 0 5px 0;
+}
 aside{
     background-color: #B31312;
     grid-area: aside;
@@ -209,11 +261,9 @@ aside section {
 }
 
 aside section h3 {
-    margin: 0;
     margin-bottom: 30px;
     text-decoration: underline;
     font-size: 1.2em;
-    text-align: center;
 }
 
 aside section article{
@@ -231,36 +281,18 @@ aside a img{
 .aside_parrafo_testimonios{
     font-family: annapurna SIL;
     font-size: 0.8em;
-    color: #0f0f30;
+    color: #050522;
     margin: 0;
 }
 
 footer{
-    display: flex;
-    flex-wrap: nowrap;
     font-size: 0.6em;
-    justify-content: space-around;
-    flex-direction: row-reverse;
     background-color: #2B2A4C;
     color: bisque;
     grid-area: footer;
 }
 
-footer section ul li {
-    list-style: none;
-    margin: 10px 0 0 0;
-}
-
-.footer_logo{
-    width: 200px;
-    border-radius: 50%;
-}
-
-.footer_h2{
-    margin: 0 0 10px 0;
-}
-
-@media (max-width: 934px) {
+@media (max-width: 976px) {
     .body_pages{
         display: grid;
         grid-template-areas:
@@ -276,19 +308,20 @@ footer section ul li {
     }
 
     article{
-        width: 280px;
+        width: 100%;
         margin: 0px;
     }
 
-    .footer_logo{
-        width: 0;
+    aside section article {
+        width: 290px;
     }
+
 }
 
 
 
 
-@media (max-width: 834px){
+@media (max-width: 876px){
     
     .body_pages{
         font-size: 28px
@@ -308,7 +341,7 @@ footer section ul li {
     }
 }
 
-@media (max-width : 642px){
+@media (max-width : 696px){
 
     header{
         background-size: auto;
@@ -341,8 +374,4 @@ footer section ul li {
         flex-direction: column;
     }
     
-    footer {
-        padding-bottom: 20px;
-        flex-direction: column;
-    }
 }
